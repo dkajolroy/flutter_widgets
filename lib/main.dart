@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_01/widgets/listView_widget.dart';
+import 'package:flutter_application_01/widgets/image_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: ListViewWidget());
+    return const MaterialApp(home: ImageWidget());
   }
 }
