@@ -30,14 +30,18 @@ class InputWidget extends StatelessWidget {
                             InputDecoration.collapsed(hintText: "Username"),
                       ),
                     ),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     Container(
                       padding: const EdgeInsets.all(10),
                       color: Colors.grey[200],
                       child: const TextField(
                         decoration:
-                            InputDecoration.collapsed(hintText: "Username"),
+                            InputDecoration.collapsed(hintText: "Password"),
                       ),
-                    )
+                    ),
+                    ElevatedButton(onPressed: () {}, child: const Text("Login"))
                   ],
                 ),
               )
