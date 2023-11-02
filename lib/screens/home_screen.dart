@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_01/widgets/bottomNav_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-            child: Container(
-      height: 200,
-      width: 200,
-      alignment: const Alignment(0, 0),
-      decoration: BoxDecoration(
-        color: Colors.teal,
-        border: Border.all(color: Colors.black, width: 2),
-        borderRadius: const BorderRadius.horizontal(
-            left: Radius.circular(20), right: Radius.circular(20)),
-        boxShadow: const [
-          BoxShadow(
-              color: Colors.red, offset: Offset(10, 10), blurRadius: 15.10)
-        ],
-      ),
-      child: const Text(
-        "Home Page",
-        style: TextStyle(color: Colors.white, fontSize: 20),
-      ),
-    )));
+    return Scaffold(body: pages[1], bottomNavigationBar: BottomNavWidget());
   }
 }
+
+final List<Widget> pages = [
+  const Center(
+    child: Text(
+      "Home",
+      style: TextStyle(fontSize: 30),
+    ),
+  ),
+  const Center(
+    child: Text(
+      "Shop",
+      style: TextStyle(fontSize: 30),
+    ),
+  ),
+  const Center(
+    child: Text(
+      "Account",
+      style: TextStyle(fontSize: 30),
+    ),
+  )
+];
